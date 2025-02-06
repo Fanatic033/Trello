@@ -28,9 +28,14 @@ export class TaskService {
 	}
 
 	async update(dto: Partial<TaskDto>, userId: string, taskId: string) {
+		const task = await this.prisma.task.findFirst({
+			where: { id: taskId, userId }
+		});
+
+		if (!task) throw new Error('Task not found');
+
 		return this.prisma.task.update({
 			where: {
-				userId,
 				id: taskId
 			},
 			data: dto

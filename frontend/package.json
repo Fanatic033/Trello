@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -17,6 +17,7 @@
     "@tanstack/react-query-devtools": "^5.64.2",
     "axios": "^1.7.9",
     "clsx": "^2.1.1",
+    "dayjs": "^1.11.10",
     "js-cookie": "^3.0.5",
     "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.474.0",

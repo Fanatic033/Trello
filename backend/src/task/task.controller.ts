@@ -41,7 +41,7 @@ export class TaskController {
 		@CurrentUser('id') userId: string,
 		@Param('id') id: string
 	) {
-		return this.taskService.update(dto, id, userId)
+		return this.taskService.update(dto, userId,id)
 	}
 
 	@HttpCode(200)
