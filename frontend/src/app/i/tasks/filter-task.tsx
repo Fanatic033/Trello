@@ -1,9 +1,8 @@
-import dayjs from 'dayjs';
-import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
-import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
-import { FILTERS } from './columns.data';
+import dayjs from 'dayjs'
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
+import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
+import { FILTERS } from './columns.data'
 import type { ITaskResponse } from '@/types/task.types'
-
 
 dayjs.extend(isSameOrAfter)
 dayjs.extend(isSameOrBefore)
