@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 	title: 'Dashboard',
 	...NO_INDEX_PAGE
 }
-export default function AuthPage() {
+export default function DashboardPage() {
 	return <div>
 		<Heading title={'Statistics'}/>
 		<Statistics/>

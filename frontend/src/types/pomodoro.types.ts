@@ -7,7 +7,7 @@ export interface IPomodoroRoundResponse extends IBase {
 
 export interface IPomodoroSessionResponse extends IBase {
 	isCompleted?: boolean
-	rounds?: IPomodoroRoundResponse
+	rounds?: IPomodoroRoundResponse[]
 }
 
 export type TypePomodoroSessionFormState = Partial<
