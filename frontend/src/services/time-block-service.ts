@@ -8,7 +8,12 @@ class TimeBlockService {
 	private BASE_URL = '/user/time-blocks'
 
 	async getTimeBlocks() {
-		return await axiosWithAuth.get<ITimeBlockResponse>(this.BASE_URL)
+		return await axiosWithAuth.get<ITimeBlockResponse[]>(this.BASE_URL)
+	}
+
+	async createTimeBlock(data: TypeTimeBlockFormState) {
+		const response = await axiosWithAuth.post(this.BASE_URL, data)
+		return response
 	}
 
 	async updateOrderTimeBlock(ids: string[]) {
