@@ -8,7 +8,7 @@ import { Field } from '@/components/ui/fields/Field'
 import type { TypeTimeBlockFormState } from '@/types/time-block.types'
 
 export function TimeBlockingForm() {
-	const { register, control, watch, reset, handleSubmit, getValues } =
+	const { register, control, watch, reset, handleSubmit } =
 		useFormContext<TypeTimeBlockFormState>()
 
 	const existsId = watch('id')

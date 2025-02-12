@@ -1,6 +1,4 @@
-import { IsBoolean, IsEnum, IsNumber, IsOptional, IsString } from 'class-validator'
-import { Priority } from '@prisma/client'
-import { Transform } from 'class-transformer'
+import { IsNumber, IsOptional, IsString } from 'class-validator'
 
 export class TimeBlockDto {
 	@IsString()
@@ -8,7 +6,7 @@ export class TimeBlockDto {
 
 	@IsString()
 	@IsOptional()
-	color: string
+	color?: string
 
 	@IsNumber()
 	duration: number
